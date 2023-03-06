@@ -97,7 +97,7 @@ x2 = 1 + 2;
 
 // 05-12 예제
 // 표현식이 아닌 문은 값처럼 사용할 수 없다.
-var foo = var x3; // SyntaxError: Unexpected token var
+// var foo = var x3; // SyntaxError: Unexpected token var
 
 // 변수 선언문은 값처럼 쓸수 없다.
 
@@ -107,4 +107,3 @@ let x4;
 
 // 할당문은 그 자체가 표현식이지만 완전한 문이기도 하다. 즉, 할당문은 표현식인 문이다.
 x4 = 100;
-
