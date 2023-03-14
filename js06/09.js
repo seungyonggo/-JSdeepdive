@@ -120,3 +120,142 @@ console.log(1 * "10");
 
 1 / "one";
 console.log(1 / "one");
+
+console.log("=====================");
+
+"1" > 0;
+console.log("1" > 0);
+
+console.log("=====================");
+
+// 문자열 타입
+
+console.log(+"");
++"";
+console.log(+"0");
++"0";
+console.log(+"1");
++"1";
+console.log(+"string");
++"string";
+
+// 불리언 타입
+console.log(+true);
++true;
+console.log(+false);
++false;
+
+// null 타입
+console.log(+null);
++null;
+
+// undefined 타입
+console.log(+undefined);
++undefined;
+
+// 심벌 타입
+// console.log(+Symbol());
+// +Symbol();
+
+// 객체 타입
+console.log(+{});
++{};
+console.log(+[]);
++[];
+console.log(+[10, 20]);
++[10, 20];
+console.log(+function () {});
++function () {};
+
+console.log("=====================");
+
+if ("") console.log(x);
+
+console.log("=====================");
+
+if ("") console.log("1");
+if (true) console.log("2");
+if (0) console.log("3");
+if ("str") console.log("4");
+if (null) console.log("5");
+
+console.log("=====================");
+
+if (!false) console.log(false + "is falsy value");
+if (!undefined) console.log(undefined + "is falsy value");
+if (!null) console.log(null + "is falsy value");
+if (!0) console.log(0 + "is falsy value");
+if (!NaN) console.log(NaN + "is falsy value");
+if (!"") console.log("" + "is falsy value");
+
+console.log("=====================");
+
+// 전달받은 인수가 Falsy 값이면 true, Truthy 값이면 false를 반환한다.
+function isFalsy(v) {
+  return !v;
+}
+
+// 전달받은 인수가 Truthy 값이면 true, Falsy 값이면 false를 반환한다.
+function isTruthy(v) {
+  return !!v;
+}
+
+// 모두 true를 반환한다.
+isFalsy(false);
+isFalsy(undefined);
+isFalsy(null);
+isFalsy(0);
+isFalsy(NaN);
+isFalsy("");
+
+// 모두 true를 반환한다.
+isTruthy(true);
+isTruthy("0");
+isTruthy({});
+isTruthy([]);
+
+console.log("=====================");
+
+// 1. String 생성자 함수를 new 연산자 없이 호출하는 방법
+// 숫자 타입 => 문자열 타입
+String(1);
+console.log(String(1));
+String(NaN);
+console.log(String(NaN));
+String(Infinity);
+console.log(String(Infinity));
+// 불리언 타입
+String(true);
+console.log(String(true));
+String(false);
+console.log(String(false));
+
+// 2. Object.prototype.toString 메서드를 사용하는 방법
+// 숫자 타입 => 문자열 타입
+(1).toString();
+console.log((1).toString());
+NaN.toString();
+console.log(NaN.toString());
+console.log(Infinity.toString());
+Infinity.toString();
+// 불리언 타입 => 문자열 타입
+// (true).toString();
+console.log(true.toString());
+// false.toString();
+console.log(false.toString());
+
+// 3. 문자열 연결 연산자를 이용하는 방법
+// 숫자 타입 => 문자열 타입
+1 + "";
+console.log(1 + "");
+NaN + "";
+console.log(NaN + "");
+Infinity + "";
+console.log(Infinity + "");
+// 불리언 타입 => 문자열 타입
+true + "";
+console.log(true + "");
+false + "";
+console.log(false + "");
+
+console.log("=====================");
