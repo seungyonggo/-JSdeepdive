@@ -259,3 +259,172 @@ false + "";
 console.log(false + "");
 
 console.log("=====================");
+
+// 1. Numver 생성자 함수를 new 연산자 없이 호출하는 방법
+// 문자열 타입 => 숫자 타입
+Number("0");
+console.log("0");
+
+Number("-1");
+console.log("-1");
+
+Number("10.53");
+console.log("10.53");
+
+// 불리언 타입 => 숫자 타입
+Number(true);
+console.log(true);
+
+Number(false);
+console.log(false);
+
+// 2. parseInt, ParseFloat 함수를 사용하는 방법(문자열만 변환 가능)
+// 문자열 타입 => 숫자 타입
+parseInt("0");
+console.log(parseInt("0"));
+
+parseInt("-1");
+console.log(parseInt("-1"));
+
+parseFloat("10.53");
+console.log(parseFloat("10.53"));
+
+// 3. + 단항 산술 연산자를 이용하는 방법
+// 문자열 타입 => 숫자타입
++"0";
+console.log(+"0");
+
++"-1";
+console.log(+"-1");
+
++"10.53";
+console.log(+"10.53");
+
+// 불리언 타입 => 숫자 타입
++true;
+console.log(+true);
+
++false;
+console.log(+false);
+
+// 4. * 산술 연산자를 이용하는 방법
+// 문자열 타입 => 숫자 타입
+"0" * 1;
+console.log("0" * 1);
+
+"-1" * 1;
+console.log("-1" * 1);
+
+"10.53" * 1;
+console.log("10.53" * 1);
+
+// 불리언 타입 => 숫자 타입
+true * 1;
+console.log(true * 1);
+
+false * 1;
+console.log(false * 1);
+
+console.log("=====================");
+// 1. Boolean 생성자 함수를 new 연산자 없이 호출하는 방법
+// 문자열 타입 => 불리언 타입
+Boolean("x");
+console.log(Boolean("x"));
+
+Boolean("");
+console.log(Boolean(""));
+
+Boolean("false");
+console.log(Boolean("false"));
+
+// 숫자 타입 => 불리언타입
+Boolean(0);
+console.log(Boolean(0));
+
+Boolean(1);
+console.log(Boolean(1));
+
+Boolean(NaN);
+console.log(Boolean(NaN));
+
+Boolean(Infinity);
+console.log(Boolean(Infinity));
+
+// null 타입 => 불리언 타입
+Boolean(null);
+console.log(Boolean(null));
+
+// undefined 타입 => 불리언 타입
+Boolean(undefined);
+console.log(Boolean(undefined));
+
+// 객체 타입 => 불리언 타입
+Boolean({});
+console.log(Boolean({}));
+
+Boolean([]);
+console.log(Boolean([]));
+
+// 2. ! 부정 논리 연사자를 두 번 사용하는 방법
+// 문자열 타입 => 불리언 타입
+!!"x";
+console.log(!!"x");
+
+!!"";
+console.log(!!"");
+
+!!"false";
+console.log(!!"false");
+
+// 숫자 타입 => 불리언 타입
+!!0;
+console.log(!!0);
+
+!!1;
+console.log(!!1);
+
+!!NaN;
+console.log(!!NaN);
+
+!!Infinity;
+console.log(!!Infinity);
+
+// null 타입 => 불리언 타입
+!!null;
+console.log(!!null);
+
+// undefined 타입 => 불리언 타입
+!!undefined;
+console.log(!!undefined);
+
+// 객체 타입 => 불리언 타입
+!!{};
+console.log(!!{});
+
+!![];
+console.log(!![]);
+
+console.log("=====================");
+"Cat" && "Dog";
+console.log("Cat" && "Dog");
+
+console.log("=====================");
+"Cat" || "Dog";
+console.log("Cat" || "Dog");
+
+console.log("=====================");
+// 논리합(||) 연산자
+"Cat" || "Dog";
+console.log("Cat" || "Dog");
+false || "Dog";
+console.log(false || "Dog");
+"Cat" || false;
+console.log("Cat" || false);
+
+// 논리곱(&&) 연산자
+"Cat" && "Dog";
+console.log("Cat" && "Dog");
+false && "Dog";
+console.log(false && "Dog");
+"Cat" && false;
+console.log("Cat" && false);
