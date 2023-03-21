@@ -428,3 +428,106 @@ false && "Dog";
 console.log(false && "Dog");
 "Cat" && false;
 console.log("Cat" && false);
+
+console.log("=====================");
+
+let done = true;
+let message = "";
+
+// 주어진 조건이 true일 때
+if (done) message = "완료";
+// if 문은 단축 평가로 대체 가능하다.
+// done이 true라면 message에 '완료'를 할당
+message = done && "완료";
+console.log(message);
+
+console.log("=====================");
+let done1 = false;
+let message1 = "";
+// 주어진 조건이 false일 때
+if (!done1) message1 = "미완료";
+// if 문은 단축 평가로 대체 가능하다.
+// done1이 false라면 message에 '미완료'를 할당
+message1 = done1 || "미완료";
+console.log(message1);
+
+console.log("=====================");
+let done2 = true;
+let message2 = "";
+// if ... else 문
+if (done2) message2 = "완료";
+else message2 = "미완료";
+console.log(message2);
+// if ... else 문은 삼항 조건 연산자로 대체 가능하다.
+message2 = done2 ? "완료" : "미완료";
+console.log(message);
+
+console.log("=====================");
+let elem = null;
+//elem이 null이나 undefined와 같은 Falsy 값이면 elem으로 평가되고
+// elem이 Truthy 값이면 elem.value로 평가된다.
+let value = elem && elem.value;
+console.log(value);
+
+console.log("=====================");
+//단축 평가를 사용한 매개변수의 기본값 설정
+function getStringLength(str) {
+  str = str || "";
+  return str.length;
+}
+
+getStringLength();
+console.log(getStringLength());
+getStringLength("hi");
+console.log(getStringLength("hi"));
+
+// ES6의 매개변수의 기본값 설정
+function getStringLength(str = "") {
+  return str.length;
+}
+
+getStringLength();
+getStringLength("hi");
+
+console.log(getStringLength());
+console.log(getStringLength("hi"));
+
+console.log("=====================");
+
+let elem1 = null;
+// elem이 null 또는 undefined이면 undefined를 반환하고, 그렇지 않으면 우항의 프로퍼티 참조를 이어간다.
+let value1 = elem1?.value1;
+console.log(value1);
+
+console.log("=====================");
+
+let elem2 = null;
+// elem이 Falsy 값이면 elem으로 평가되고, elem이 Truthy 값이면 elem.value로 평가된다.
+let value2 = elem2 && elem2.value2;
+console.log(value2);
+
+console.log("=====================");
+let str3 = "";
+// 문자열의 길이(length)를 참조한다.
+let length1 = str3 && str3.length;
+// 문자열의 길이(length)를 참조하지 못한다.
+console.log(length1);
+
+console.log("=====================");
+let str4 = "";
+let length2 = str4?.length2;
+console.log(length2);
+
+console.log("=====================");
+let foo = null ?? "default string";
+console.log(foo);
+
+console.log("=====================");
+
+let foo1 = "" || "default string";
+console.log(foo1);
+
+console.log("=====================");
+
+let foo2 = "" ?? "default string";
+console.log(foo2);
