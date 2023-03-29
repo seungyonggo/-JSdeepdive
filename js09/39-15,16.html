@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul>
+      <li class="fruit apple">Apple</li>
+      <li class="fruit banana">Banana</li>
+      <li class="fruit orange">Orange</li>
+    </ul>
+    <script>
+      const $elems = document.querySelectorAll("ul > li");
+      console.log($elems);
+      $elems.forEach((elem) => {
+        elem.style.color = "red";
+      });
+      const $all = document.querySelectorAll("*");
+    </script>
+  </body>
+</html>
