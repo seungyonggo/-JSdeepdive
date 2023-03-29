@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="foo">Hello</div>
+    <script>
+      console.log(document.nodeValue);
+      const $foo = document.getElementById("foo");
+      console.log($foo.nodeValue);
+      const $textNode = $foo.firstChild;
+      console.log($textNode.nodeValue);
+    </script>
+  </body>
+</html>
