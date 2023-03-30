@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="foo">Hello</div>
+  </body>
+  <script>
+    document.getElementById("foo").innerHTML =
+      '<img src="x" onerror="alert(document.cookie)">';
+  </script>
+</html>
