@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="foo">Hello</div>
+    <script>
+      const $foo = document.getElementById("foo");
+      console.log($foo.textContent === $foo.firstChild.nodeValue);
+    </script>
+  </body>
+</html>
