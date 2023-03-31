@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>test</div>
+    <ul id="fruits">
+      <li>Apple</li>
+      <li>Banana</li>
+    </ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+    const $li = document.createElement("li");
+    $li.appendChild(document.createTextNode("Orange"));
+    $fruits.insertBefore($li, document.querySelector("div")); // div ->li
+  </script>
+</html>
