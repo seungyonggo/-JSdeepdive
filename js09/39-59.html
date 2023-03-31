@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="fruits"></ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+    const $container = document.createElement("div");
+    ["Apple", "Banana", "Orange"].forEach((text) => {
+      const $li = document.createElement("li");
+      const textNode = document.createTextNode(text);
+      $li.appendChild(textNode);
+      $container.appendChild($li);
+      $fruits.appendChild($container);
+    });
+  </script>
+</html>

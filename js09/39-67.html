@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="fruits">
+      <li>Apple</li>
+    </ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+    const $apple = $fruits.firstElementChild;
+    const $shallowColone = $apple.cloneNode();
+    $shallowColone.textContent = "Banana";
+    $fruits.appendChild($shallowColone);
+    const $deepClone = $fruits.cloneNode(true);
+    $fruits.appendChild($deepClone);
+  </script>
+</html>
